@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+  TODO comment and license
+-->
+
+<GMassist:GMassistWindow title="%GM assistant" maximized="true"
+    xmlns:bxml     = "http://pivot.apache.org/bxml"
+    xmlns:content  = "org.apache.pivot.wtk.content"
+    xmlns:wtk      = "org.apache.pivot.wtk"
+    xmlns:GMassist = "GMassist.framework"
+    xmlns="org.apache.pivot">
+  <bxml:define>
+    <wtk:Prompt bxml:id="confirmPluginClose" title="Confim Plugin Close"
+        message="Should this plugin be closed?"
+        options="['Cancel', 'OK']" selectedOptionIndex="1"/>
+  </bxml:define>
+  
+  <wtk:TabPane bxml:id="tabPane">
+    <corner>
+      <wtk:BoxPane bxml:id="cornerBoxPane" styles="{horizontalAlignment:'right'}">
+        <wtk:Label text="search:"/>
+        <wtk:TextInput textSize="15"/>
+      </wtk:BoxPane>
+    </corner>
+    
+    <wtk:BoxPane>
+      <wtk:TabPane.tabData>
+        <content:ButtonData text="workspace"/>
+      </wtk:TabPane.tabData>
+      <!-- TODO workspace tab -->
+    </wtk:BoxPane>
+    
+  </wtk:TabPane>
+</GMassist:GMassistWindow>
