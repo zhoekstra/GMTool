@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+  TODO comment and license
+-->
+
+<BoxPane orientation="horizontal" styles="{fill:true}"
+    xmlns:bxml     = "http://pivot.apache.org/bxml"
+    xmlns:content  = "org.apache.pivot.wtk.content"
+    xmlns="org.apache.pivot">
+  
+  <TabPane.tabData>
+    <content:ButtonData text="Workspace"/>
+  </TabPane.tabData>
+  
+  <Border styles="{padding:2}">
+    <Label text="320x240" preferredWidth="320" preferredHeight="240"
+        styles="{horizontalAlignment:'center'}, verticalAlignment:'center'}"/>
+  </Border>
+  
+</BoxPane>
+
+

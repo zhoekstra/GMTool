@@ -7,29 +7,38 @@
 <GMassist:GMassistWindow title="%GM assistant" maximized="true"
     xmlns:bxml     = "http://pivot.apache.org/bxml"
     xmlns:content  = "org.apache.pivot.wtk.content"
-    xmlns:wtk      = "org.apache.pivot.wtk"
     xmlns:GMassist = "GMassist.framework"
-    xmlns="org.apache.pivot">
+    xmlns="org.apache.pivot.wtk">
   <bxml:define>
-    <wtk:Prompt bxml:id="confirmPluginClose" title="Confim Plugin Close"
+    <Prompt bxml:id="confirmPluginClose" title="Confim Plugin Close"
         message="Should this plugin be closed?"
         options="['Cancel', 'OK']" selectedOptionIndex="1"/>
+    <FileBrowserSheet bxml:id="fileBrowserSheet"/>
   </bxml:define>
   
-  <wtk:TabPane bxml:id="tabPane">
-    <corner>
-      <wtk:BoxPane bxml:id="cornerBoxPane" styles="{horizontalAlignment:'right'}">
-        <wtk:Label text="search:"/>
-        <wtk:TextInput textSize="15"/>
-      </wtk:BoxPane>
-    </corner>
-    
-    <wtk:BoxPane>
-      <wtk:TabPane.tabData>
-        <content:ButtonData text="workspace"/>
-      </wtk:TabPane.tabData>
-      <!-- TODO workspace tab -->
-    </wtk:BoxPane>
-    
-  </wtk:TabPane>
+  <!-- <actionMappings>
+    <Window.ActionMapping action="fileNew" keyStroke="CMD-N"/>
+    <Window.ActionMapping action="fileOpen" keyStroke="CMD-O"/>
+  </actionMappings>
+  
+  <menuBar>
+    <MenuBar>
+    </MenuBar>
+  </menuBar> -->
+  
+  <Border styles="{padding:12}">
+    <TabPane bxml:id="mainGMassistPane">
+      <corner>
+      
+        <!--
+          When the search box is used, the contents in passed onto the contents
+          will be passed to a function on the active tab for searching instead
+        -->
+        <BoxPane bxml:id="cornerBoxPane" styles="{horizontalAlignment:'right'}">
+          <Label text="search:"/>
+          <TextInput textSize="15"/>
+        </BoxPane>
+      </corner>
+    </TabPane>
+  </Border>
 </GMassist:GMassistWindow>
