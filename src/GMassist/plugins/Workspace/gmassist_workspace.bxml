@@ -7,7 +7,7 @@
 <BoxPane orientation="horizontal" styles="{fill:true}"
     xmlns:bxml     = "http://pivot.apache.org/bxml"
     xmlns:content  = "org.apache.pivot.wtk.content"
-    xmlns="org.apache.pivot">
+    xmlns          = "org.apache.pivot">
   
   <TabPane.tabData>
     <content:ButtonData text="Workspace"/>

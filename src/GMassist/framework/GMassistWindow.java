@@ -1,9 +1,9 @@
 package GMassist.framework;
 
 import java.net.URL;
-import java.util.Collection;
 
 import org.apache.pivot.beans.Bindable;
+import org.apache.pivot.collections.Collection;
 import org.apache.pivot.collections.Map;
 import org.apache.pivot.util.Resources;
 import org.apache.pivot.wtk.TabPane;

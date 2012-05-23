@@ -8,23 +8,13 @@
     xmlns:bxml     = "http://pivot.apache.org/bxml"
     xmlns:content  = "org.apache.pivot.wtk.content"
     xmlns:GMassist = "GMassist.framework"
-    xmlns="org.apache.pivot.wtk">
+    xmlns          = "org.apache.pivot.wtk">
   <bxml:define>
     <Prompt bxml:id="confirmPluginClose" title="Confim Plugin Close"
         message="Should this plugin be closed?"
         options="['Cancel', 'OK']" selectedOptionIndex="1"/>
     <FileBrowserSheet bxml:id="fileBrowserSheet"/>
   </bxml:define>
-  
-  <!-- <actionMappings>
-    <Window.ActionMapping action="fileNew" keyStroke="CMD-N"/>
-    <Window.ActionMapping action="fileOpen" keyStroke="CMD-O"/>
-  </actionMappings>
-  
-  <menuBar>
-    <MenuBar>
-    </MenuBar>
-  </menuBar> -->
   
   <Border styles="{padding:12}">
     <TabPane bxml:id="mainGMassistPane">
