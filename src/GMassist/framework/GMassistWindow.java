@@ -26,11 +26,16 @@ public class GMassistWindow extends Window implements Bindable {
    * 
    * @param activePlugins  the list of Plugins to add to the TabPane
    */
-  public void applyPlugins(Collection<Plugin> activePlugins) {
-    for(Plugin curr : activePlugins) {
+  public void applyPlugins(Collection<GMassistTab> activePlugins) {
+    boolean added = false;
+    
+    for(GMassistTab curr : activePlugins) {
       pane.getTabs().add(curr.getGui());
+      added = true;
     }
     
-    pane.setSelectedIndex(0);
+    if(added) {
+      pane.setSelectedIndex(0);
+    }
   }
 }

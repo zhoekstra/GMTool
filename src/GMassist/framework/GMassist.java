@@ -15,7 +15,7 @@ public class GMassist implements Application {
   private GMassistWindow window = null;
   
   /** the set of possible plugins to load */
-  private Map<String, Plugin> plugins = null;
+  private Map<String, GMassistTab> plugins = null;
   
   /**
    * Constructor the main GMassist object. This loads all the plugins their
@@ -24,7 +24,7 @@ public class GMassist implements Application {
    */
   public GMassist() {
     BXMLSerializer bxml = new BXMLSerializer();
-    plugins = new HashMap<String, Plugin>();
+    plugins = new HashMap<String, GMassistTab>();
     
     
   }
@@ -32,7 +32,7 @@ public class GMassist implements Application {
   @Override
   public void startup(Display disp, Map<String, String> prop) throws Exception {
     BXMLSerializer bxml = new BXMLSerializer();
-    List<Plugin> activePlugins = new ArrayList<Plugin>();
+    List<GMassistTab> activePlugins = new ArrayList<GMassistTab>();
     
     window = (GMassistWindow)bxml.readObject(
         getClass().getResource("gmassist_framework.bxml"));
