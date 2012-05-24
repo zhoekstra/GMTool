@@ -51,7 +51,7 @@ public class GMassist implements Application {
   @Override
   public void startup(Display disp, Map<String, String> prop) throws Exception {
     BXMLSerializer bxml = new BXMLSerializer();
-    List<Plugin> activePlugins = new ArrayList<Plugin>();
+    List<GMassistTab> activePlugins = new ArrayList<GMassistTab>();
     
     window = (GMassistWindow)bxml.readObject(
         getClass().getResource("gmassist_framework.bxml"));
